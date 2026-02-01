@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doraemon Movies</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#c6e6ff,#f4f9ff);
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:#0077cc;
+    padding:20px;
+    text-align:center;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* SECTION */
+section{
+    padding:60px 10%;
+    animation:fadeIn 1s ease;
+}
+
+.movie-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.movie-card:hover{
+    transform:translateY(-5px);
+}
+
+.movie-title{
+    color:#0077cc;
+    margin-bottom:15px;
+}
+
+.poster-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+.poster-container img{
+    width:220px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.poster-container img:hover{
+    transform:scale(1.05);
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#0077cc;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#005fa3;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    max-width:800px;
+    width:90%;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0077cc;
+    color:white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DORAEMON MOVIES COLLECTION</h1>
+    <nav>
+        <a href="#movie1">Xứ Quỷ</a>
+        <a href="#movie2">Người Cá</a>
+    </nav>
+</header>
+
+<section id="movie1">
+<div class="movie-card">
+    <h2 class="movie-title">Tân Nobita và chuyến phiêu lưu vào xứ quỷ (2007)</h2>
+    <p><b>Đạo diễn:</b> Teramoto Yukiyo | <b>Thời lượng:</b> 112 phút | <b>Doanh thu:</b> ¥4,2 tỉ</p>
+
+    <p>
+        Nobita tạo ra thế giới phép thuật bằng Tủ điện thoại yêu cầu.
+        Khi Quỷ vương Dimarian chuẩn bị xâm lược Trái Đất, nhóm bạn phải
+        bước vào cuộc chiến sinh tử. Nobita đã bắn mũi tên bạc tiêu diệt
+        trái tim Quỷ vương và cứu thế giới.
+    </p>
+
+    <div class="poster-container">
+        <img src="https://image.tmdb.org/t/p/original/bbBFcwfDZAlF1qxRHX3r8hueen0.jpg">
+        <img src="https://cdn.popsww.com/blog/sites/2/2021/03/phim-doraemon-tap-dai-nhat-nobita-va-chuyen-phieu-luu-vao-xu-quy.jpg">
+    </div>
+
+    <a class="btn" onclick="openModal('https://www.youtube.com/embed/mNluVFtvMhY')">Xem Trailer</a>
+</div>
+</section>
+
+<section id="movie2">
+<div class="movie-card">
+    <h2 class="movie-title">Nobita và cuộc đại thủy chiến ở xứ sở người cá (2010)</h2>
+    <p><b>Đạo diễn:</b> Kosuba Kozo | <b>Thời lượng:</b> 99 phút | <b>Doanh thu:</b> ¥3,16 tỉ</p>
+
+    <p>
+        Doraemon biến Tokyo thành thành phố dưới nước. Nhóm bạn gặp Sophia –
+        công chúa người cá. Khi Shizuka bị bắt nhầm, cả nhóm phải chiến đấu
+        với Buikin để cứu bạn và bảo vệ Vương quốc người cá.
+    </p>
+
+    <div class="poster-container">
+        <img src="https://image.tmdb.org/t/p/original/3puGf3GU1R5HRE9yaNEpy0SlzZV.jpg">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTViZGMxODgtZjc3OC00MzQwLWJiNGYtZGU0ZmIwNDFjZWYyXkEyXkFqcGc@._V1_.jpg">
+    </div>
+</div>
+</section>
+
+<!-- MODAL TRAILER -->
+<div id="trailerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe id="trailerFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<footer>
+    © 2026 | Website giới thiệu Movie Doraemon
+</footer>
+
+<script>
+function openModal(videoUrl){
+    document.getElementById("trailerModal").style.display="flex";
+    document.getElementById("trailerFrame").src=videoUrl;
+}
+
+function closeModal(){
+    document.getElementById("trailerModal").style.display="none";
+    document.getElementById("trailerFrame").src="";
+}
+
+window.onclick=function(e){
+    const modal=document.getElementById("trailerModal");
+    if(e.target==modal){
+        closeModal();
+    }
+}
+</script>
+
+</body>
+</html>
